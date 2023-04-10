@@ -1,8 +1,8 @@
 # C# code snippests
 ### Allowed snippets:
-    + method
-    + method_1param
-    + method_2param
++ method
++ method_1param
++ method_2param
 
 ### Code conversion: 
 
