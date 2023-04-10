@@ -4,7 +4,6 @@
         <Identity Id="SimpleSnippets.27a77c54-cd44-459a-b0eb-5a359525fae5" Version="1.0" Language="en-US" Publisher="Sergio Martin" />
         <DisplayName>SimpleSnippets</DisplayName>
         <Description xml:space="preserve">C# simple code snippets</Description>
-        <License>LICENSE.txt</License>
         <Icon>icono_snippets.ico</Icon>
         <PreviewImage>icono_snippets.ico</PreviewImage>
         <Tags>snippet, snippets, code snippets</Tags>
