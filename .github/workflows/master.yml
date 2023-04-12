@@ -30,7 +30,7 @@ jobs:
     - run: dir src
 
     - name: Build solution
-      run: msbuild src/SimpleSnippets.sln -t:rebuild -property:Configuration=Release -outputPath:outputDirecotry
+      run: msbuild src/SimpleSnippets.sln -t:rebuild -property:Configuration=Release;OutDir=compiledArtifacts
 
-    - run: dir /s /b
+    - run: dir ./s /b
       if: always()
