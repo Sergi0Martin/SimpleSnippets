@@ -9,36 +9,37 @@
 5. Restart Visual Studio.
 6. Start using the code snippets.
 
-## Allowed snippets:
+## How to use:
+Type the following snippets and press TAB for autocomplete. Also you can open a conextual menu with CTRL+K,X and select the code snippet.
 + method
 + method_1param
 + method_2param
 
-## Code conversion: 
+    ## Code conversion: 
 
-`method`:
-```c#
-public void MyMethod()
-{
+    `method`:
+    ```c#
+    public void MyMethod()
+    {
 
-}
-```
+    }
+    ```
 
-`method_1param`:
-```c#
-public void MyMethod(object param1)
-{
-    
-}
-```
+    `method_1param`:
+    ```c#
+    public void MyMethod(object param1)
+    {
 
-`method_2param`:
-```c#
-public void MyMethod(object param1, object param2)
-{
-    
-}
-```
+    }
+    ```
+
+    `method_2param`:
+    ```c#
+    public void MyMethod(object param1, object param2)
+    {
+
+    }
+    ```
 
 
 > All these snippests have replacement parameters for accesibility level, return type, method name, and parameters.
