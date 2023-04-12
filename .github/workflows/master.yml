@@ -27,5 +27,7 @@ jobs:
 #    - name: Restore Packages
 #      run: nuget restore SimpleSnippets.sln
 
+    - run: dir
+
     - name: Build solution
       run: msbuild SimpleSnippets.sln -t:rebuild -property:Configuration=Release
