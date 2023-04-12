@@ -27,11 +27,11 @@ jobs:
     - name: Restore Packages
       run: nuget restore src/SimpleSnippets.sln
 
-    - run: mkdir compiledArtifacts
+#    - run: mkdir compiledArtifacts
     - run: dir src
 
     - name: Build solution
-      run: msbuild src/SimpleSnippets.sln -t:rebuild -property:Configuration=Release;OutDir=.\compiledArtifacts
+      run: msbuild src/SimpleSnippets.sln -t:rebuild -property:Configuration=Release
 
     - run: dir -s
       if: always()
