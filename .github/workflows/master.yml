@@ -1,0 +1,31 @@
+# This workflow will build a Visual Studio extension and deploy to https://marketplace.visualstudio.com/
+name: Build and deploy
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: windows-2019
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.5
+
+#    - name: setup-msbuild
+#      uses: microsoft/setup-msbuild@v1.1
+
+    - name: Restore Packages
+      run: nuget restore SimpleSnippets.sln
+
+    - name: Build solution
+      run: msbuild SimpleSnippets.sln -t:rebuild -property:Configuration=Release
