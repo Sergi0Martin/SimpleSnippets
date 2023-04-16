@@ -1,5 +1,5 @@
 # This workflow will build a Visual Studio extension and deploy to https://marketplace.visualstudio.com/
-name: Build and deploy
+name: Buid
 
 on:
   push:
