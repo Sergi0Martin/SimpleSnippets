@@ -1,4 +1,6 @@
-# C# code snippests
+# C# simple code snippests
+
+[![Buid](https://github.com/Sergi0Martin/SimpleSnippets/actions/workflows/master.yml/badge.svg)](https://github.com/Sergi0Martin/SimpleSnippets/actions/workflows/master.yml)
 
 ## Installation
 
