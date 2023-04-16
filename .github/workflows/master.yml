@@ -27,11 +27,32 @@ jobs:
     - name: Restore Packages
       run: nuget restore src/SimpleSnippets.sln
 
-#    - run: mkdir compiledArtifacts
-    - run: dir src
-
     - name: Build solution
       run: msbuild src/SimpleSnippets.sln -property:Configuration=Release
 
     - run: dir -s
       if: always()
+      
+    - uses: actions/upload-artifact@v2
+      if: always()
+      with:
+        name: solution-build
+        path: .
+
+  publish-marketplace:
+      name: Publish marketplace
+      runs-on: ubuntu-latest
+      environment: 
+        name: production
+        url: https://marketplace.visualstudio.com/items?itemName=SergioMartin.SimpleSnippets
+      needs: [build]
+      if: always()
+      steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: solution-build
+          path: .
+          
+# TODO. Modify to publish on marketplace          
+#      - name: Publish on nuget
+#        run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_KEY }} --source https://api.nuget.org/v3/index.json
